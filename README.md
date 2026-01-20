@@ -54,9 +54,9 @@ https://github.com/KelyonOmega/ArcheRage-Unleashed-CryEngine-Fix/releases/tag/v1
 
 ## Usage
 1. Run the installer
-2. Start the game
-3. Enjoy improved performance and stability
-
+2. Select your ArcheAge Documents folder (e.g. Documents\ArcheAge)
+3. Start the game
+4. Enjoy improved performance and stability
 ---------------------------------------------------------------------------------
 
 
