@@ -2,6 +2,15 @@
 ArcheAge’s CryEngine was never properly optimized by XL Games. Outdated limits and disabled features caused stuttering, slow loading and poor hardware utilization. 
 This installer does not replace or modify any game files — it only adds the required system.cfg entries for your system, improving the use of existing CryEngine features.
 
+My HWINFO:
+
+<img width="900" height="503" alt="HWINFO" src="https://github.com/user-attachments/assets/d808920e-06c5-4cfe-aef1-b63492f807b8" />
+
+
+Installer:
+
+<img width="600" height="464" alt="INSTALLER" src="https://github.com/user-attachments/assets/ba151d51-2fc9-4e23-b84f-a737e4d2eb87" />
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # ArcheAge CryEngine System.cfg Installer
@@ -43,14 +52,5 @@ For official engine documentation, see the:
 3. Enjoy improved performance and stability
 
 ---------------------------------------------------------------------------------
-
-My HWINFO:
-
-<img width="1143" height="503" alt="HWINFO" src="https://github.com/user-attachments/assets/d808920e-06c5-4cfe-aef1-b63492f807b8" />
-
-
-Installer:
-
-<img width="596" height="464" alt="INSTALLER" src="https://github.com/user-attachments/assets/ba151d51-2fc9-4e23-b84f-a737e4d2eb87" />
 
 
