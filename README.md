@@ -47,7 +47,8 @@ For official engine documentation, see the:
 
 # ArcheAge CryEngine System.cfg Installer
 
-👉 **Download the installer from the [Releases]([https://github.com/KelyonOmega/ArcheRage-Unleashed-CryEngine-Fix/releases](https://github.com/KelyonOmega/ArcheRage-Unleashed-CryEngine-Fix/releases/tag/v1.0.0)) section**
+👉 **Download the installer (v1.0.0):**  
+https://github.com/KelyonOmega/ArcheRage-Unleashed-CryEngine-Fix/releases/tag/v1.0.0
 
 ----------------------------------------------------------------------------------
 
