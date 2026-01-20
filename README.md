@@ -45,6 +45,12 @@ For official engine documentation, see the:
 
 ----------------------------------------------------------------------------------
 
+# ArcheAge CryEngine System.cfg Installer
+
+👉 **Download the installer from the [Releases](https://github.com/KelyonOmega/ArcheRage-Unleashed-CryEngine-Fix/releases) section**
+
+----------------------------------------------------------------------------------
+
 ## Usage
 1. Run the installer
 2. Start the game
