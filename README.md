@@ -41,3 +41,16 @@ For official engine documentation, see the:
 1. Run the installer
 2. Start the game
 3. Enjoy improved performance and stability
+
+---------------------------------------------------------------------------------
+
+My HWINFO:
+
+<img width="1143" height="503" alt="HWINFO" src="https://github.com/user-attachments/assets/d808920e-06c5-4cfe-aef1-b63492f807b8" />
+
+
+Installer:
+
+<img width="596" height="464" alt="INSTALLER" src="https://github.com/user-attachments/assets/ba151d51-2fc9-4e23-b84f-a737e4d2eb87" />
+
+
