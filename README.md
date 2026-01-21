@@ -71,91 +71,91 @@ They are **NOT fixed presets**.
 
 ; ==== CryEngine system.cfg reference (applied by installer) ====
 
-``sys_job_system_enable = 1``
+- ``sys_job_system_enable = 1``
 ; Enables CryEngine's internal job system for parallel task execution.
 
-``sys_budget_videomem = X``
+- ``sys_budget_videomem = X``
 ; Sets the video memory budget based on detected GPU VRAM.
 ; Improves texture streaming stability and reduces pop-in.
 
-``sys_budget_sysmem = X``
+- ``sys_budget_sysmem = X``
 ; Allocates system memory budget based on installed RAM.
 ; Prevents aggressive streaming stalls and late asset loading.
 
-``sys_streaming_memory_size = X``
+- ``sys_streaming_memory_size = X``
 ; Controls total memory available for streaming operations.
 ; Scales dynamically with system memory.
 
-``sys_job_system_max_worker = X``
+- ``sys_job_system_max_worker = X``
 ; Sets the number of worker threads based on detected logical CPU cores.
 
-``sys_streaming_use_lods = 0``
+- ``sys_streaming_use_lods = 0``
 ; Forces full-quality streaming where possible, avoiding overly aggressive LOD downgrades.
 
-``sys_budget_frametime = 16``
+- ``sys_budget_frametime = 16``
 ; Sets a 16 ms streaming time budget (60 FPS target) to prevent frame spikes.
 
-``r_UsePBuffers = 0``
+- ``r_UsePBuffers = 0``
 ; Disables legacy pixel buffers to reduce unnecessary overhead.
 
-``r_TexturesStreamPoolSize = 1536``
+- ``r_TexturesStreamPoolSize = 1536``
 ; Sets a conservative texture streaming pool size.
 ; ; Sets a conservative texture streaming pool size to improve stability.
 
-``r_UseParticlesHalfRes = 1``
+- ``r_UseParticlesHalfRes = 1``
 ; Renders particles at half resolution to reduce GPU load.
 
-``r_PostProcessEffects = 1``
+- ``r_PostProcessEffects = 1``
 ; Ensures post-processing remains enabled for visual consistency.
 
-``e_ParticlesMaxScreenFill = 32``
+- ``e_ParticlesMaxScreenFill = 32``
 ; Limits particle screen coverage to prevent excessive overdraw.
 
-``r_TexturesStreaming = 1``
+- ``r_TexturesStreaming = 1``
 ; Enables texture streaming.
 
-``sys_streaming_max_concurrent_requests = 40``
+- ``sys_streaming_max_concurrent_requests = 40``
 ; Allows more simultaneous streaming requests to reduce loading stalls.
 
-``ui_RenderThreadUpdate = 1``
+- ``ui_RenderThreadUpdate = 1``
 ; Moves UI updates to the render thread for smoother frame pacing.
 
-``e_ObjFastRegister = 1``
+- ``e_ObjFastRegister = 1``
 ; Speeds up static object registration during level loading.
 
-``e_StatObjMerge = 1``
+- ``e_StatObjMerge = 1``
 ; Enables static object merging to reduce draw calls.
 
-``e_MergedMeshes = 1``
+- ``e_MergedMeshes = 1``
 ; Enables merged mesh rendering for improved performance.
 
-``e_MergedMeshesInstanceDist = 512``
+- ``e_MergedMeshesInstanceDist = 512``
 ; Sets instance merge distance for static geometry.
 
-``r_GeomInstancing = 1``
+- ``r_GeomInstancing = 1``
 ; Enables GPU geometry instancing where supported.
 
-``r_UseHardwareOcclusionQueries = 1``
+- ``r_UseHardwareOcclusionQueries = 1``
 ; Enables hardware occlusion queries to reduce overdraw.
 
-``e_PreloadMaterials = 1``
+- ``e_PreloadMaterials = 1``
 ; Preloads materials to reduce in-game hitching.
 
-``r_UseShaderThread = 1``
+- ``r_UseShaderThread = 1``
 ; Enables a dedicated shader thread.
 
-``r_UseThreadedShaders = 1``
+- ``r_UseThreadedShaders = 1``
 ; Allows shader compilation and handling across multiple threads.
 
-``r_ShaderCompilationAsync = 1``
+- ``r_ShaderCompilationAsync = 1``
 ; Enables asynchronous shader compilation to prevent stalls.
 
-``r_ShadersPrecache = 1``
+- ``r_ShadersPrecache = 1``
 ; Precaches shaders to reduce runtime compilation hitches.
 
-``gpu_ParticlePhysics = 0``
+- ``gpu_ParticlePhysics = 0``
 ; Disables GPU particle physics to avoid instability and driver overhead.
 
-``r_TexturesStreamingPrioritizeVisibleMips = 1``
+- ``r_TexturesStreamingPrioritizeVisibleMips = 1``
 ; Prioritizes visible texture mip levels to improve visual stability.
 
