@@ -12,7 +12,7 @@ My HWINFO:
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# ArcheAge CryEngine System.cfg Installer
+# ArcheRage CryEngine System.cfg Installer
 
 This installer improves ArcheAge’s CryEngine performance and stability by adding missing or unused configuration entries to the system.cfg.
 
@@ -45,7 +45,7 @@ For official engine documentation, see the:
 
 ----------------------------------------------------------------------------------
 
-# ArcheAge CryEngine System.cfg Installer
+# ArcheRage CryEngine System.cfg Installer
 
 👉 **Download the installer (v1.0.0):**  
 https://github.com/KelyonOmega/ArcheRage-Unleashed-CryEngine-Fix/releases/tag/v1.0.0
