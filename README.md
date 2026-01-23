@@ -10,6 +10,10 @@ My HWINFO:
 
 <img width="900" height="503" alt="HWINFO" src="https://github.com/user-attachments/assets/d808920e-06c5-4cfe-aef1-b63492f807b8" />
 
+My system.cfg file:
+
+<img width="723" height="809" alt="image" src="https://github.com/user-attachments/assets/e7caeb7f-f579-4cee-a854-d88a94622270" />
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # ArcheRage CryEngine System.cfg Installer
