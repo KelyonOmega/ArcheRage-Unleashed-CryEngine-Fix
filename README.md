@@ -3,10 +3,10 @@ ArcheAge’s CryEngine was never properly optimized by XL Games. Outdated limits
 This installer does not replace or modify any game files — it only adds the required system.cfg entries for your system, improving the use of existing CryEngine features.
 
 Installer:
-- Path *(//Documents/ArcheRage)*: 
+- Browse... *(//Documents/ArcheRage)*: 
 <img width="622" height="39" alt="image" src="https://github.com/user-attachments/assets/e297244d-4aab-4973-ad3a-09201aef689a" />
 
-- Browse...: 
+- .cfg File: 
 <img width="607" height="31" alt="image" src="https://github.com/user-attachments/assets/ba779c93-b4e7-4c78-9a14-0fa5e5b0b0e2" />
 
 - Result:
