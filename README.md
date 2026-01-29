@@ -34,7 +34,7 @@ This installer improves ArcheAge’s CryEngine performance and stability by addi
 
 ----------------------------------------------------------------------------------
 
-<span style="color:red">## What this does NOT do</span>
+## What this does NOT do
 - No game files are replaced or modified
 - No binaries, assets or executables are changed
 - No mods, cheats or injections are used
