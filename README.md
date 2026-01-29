@@ -9,7 +9,7 @@ Installer:
 - File: 
 <img width="607" height="31" alt="image" src="https://github.com/user-attachments/assets/ba779c93-b4e7-4c78-9a14-0fa5e5b0b0e2" />
 
--Result:
+- Result:
 <img width="600" height="464" alt="INSTALLER" src="https://github.com/user-attachments/assets/ba151d51-2fc9-4e23-b84f-a737e4d2eb87" />
 
 My HWINFO:
