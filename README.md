@@ -9,8 +9,10 @@ This installer does not replace or modify any game files — it only adds the re
 Installer:
 
 *(Step by Step)*
-- Browse... *(//Documents/ArcheRage)*:
+- Browse...:
 <img width="594" height="179" alt="image" src="https://github.com/user-attachments/assets/78b55d80-12df-48a3-8585-cd85118c2458" />
+
+- Path: *(//Documents/ArcheRage)*
 <img width="622" height="39" alt="image" src="https://github.com/user-attachments/assets/e297244d-4aab-4973-ad3a-09201aef689a" />
 
 - Choose your **system.cfg** File: 
