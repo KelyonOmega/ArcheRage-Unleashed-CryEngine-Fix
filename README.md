@@ -2,11 +2,18 @@
 ArcheAge’s CryEngine was never properly optimized by XL Games. Outdated limits and disabled features caused stuttering, slow loading and poor hardware utilization. 
 This installer does not replace or modify any game files — it only adds the required system.cfg entries for your system, improving the use of existing CryEngine features.
 
+> ℹ️ **Info**  
+> This installer only adds additional system.cfg configuration entries.  
+> No game files are modified.
+
 Installer:
-- Browse... *(//Documents/ArcheRage)*: 
+
+*(Step by Step)*
+- Browse... *(//Documents/ArcheRage)*:
+<img width="594" height="179" alt="image" src="https://github.com/user-attachments/assets/78b55d80-12df-48a3-8585-cd85118c2458" />
 <img width="622" height="39" alt="image" src="https://github.com/user-attachments/assets/e297244d-4aab-4973-ad3a-09201aef689a" />
 
-- .cfg File: 
+- Choose your **system.cfg** File: 
 <img width="607" height="31" alt="image" src="https://github.com/user-attachments/assets/ba779c93-b4e7-4c78-9a14-0fa5e5b0b0e2" />
 
 - Result:
