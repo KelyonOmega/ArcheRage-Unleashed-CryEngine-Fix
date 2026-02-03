@@ -9,46 +9,52 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      # ----------------------------------
+      # Checkout
+      # ----------------------------------
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # ----------------------------------
+      # Setup .NET
+      # ----------------------------------
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '6.0.x'
 
-      # -----------------------------
+      # ----------------------------------
       # Build detector (C#)
-      # -----------------------------
+      # ----------------------------------
       - name: Build detector
         working-directory: installer
         run: |
           dotnet restore Checking.CPU.RAM.GPU.csproj
           dotnet build Checking.CPU.RAM.GPU.csproj -c Release
 
-      # -----------------------------
-      # Copy detector exe for Inno
-      # -----------------------------
+      # ----------------------------------
+      # Copy detector exe next to .iss
+      # ----------------------------------
       - name: Copy detector exe
         run: |
           copy installer\bin\Release\**\Checking.CPU.RAM.GPU.exe installer\Checking.CPU.RAM.GPU.exe
 
-      # -----------------------------
+      # ----------------------------------
       # Install Inno Setup
-      # -----------------------------
+      # ----------------------------------
       - name: Install Inno Setup
         run: choco install innosetup --no-progress
 
-      # -----------------------------
-      # Build installer
-      # -----------------------------
+      # ----------------------------------
+      # Build installer (.iss)
+      # ----------------------------------
       - name: Build installer with Inno Setup
         run: |
-          iscc installer\Kelyons_CryEngineFix_Final.iss
+          & iscc "installer\Kelyons_CryEngineFix_Final.iss"
 
-      # -----------------------------
-      # Upload installer to release
-      # -----------------------------
+      # ----------------------------------
+      # Upload installer to GitHub Release
+      # ----------------------------------
       - name: Upload installer
         uses: softprops/action-gh-release@v2
         with:
