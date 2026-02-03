@@ -1,0 +1,41 @@
+name: ArcheRage Unleashed CryEngine Fix Build
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Build detector (C#)
+        run: |
+          cd detector
+          dotnet restore
+          dotnet build Checking.CPU.RAM.GPU.csproj -c Release
+
+      - name: Copy detector exe for Inno Setup
+        run: |
+          copy detector\bin\Release\**\Checking.CPU.RAM.GPU.exe installer\Inno\Checking.CPU.RAM.GPU.exe
+
+      - name: Install Inno Setup
+        run: |
+          choco install innosetup
+      
+      - name: Build installer with Inno Setup
+        run: |
+          iscc installer\Inno\Kelyons Cry Engine Fix Final.iss
+
+      - name: Upload installer to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: installer/Inno/Output/*.exe
