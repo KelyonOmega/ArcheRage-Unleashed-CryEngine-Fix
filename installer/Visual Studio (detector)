@@ -1,0 +1,73 @@
+using System;
+using System.IO;
+using System.Management;
+using SharpDX.DXGI;
+
+class Program
+{
+    static void Main()
+    {
+        string exeDir = AppContext.BaseDirectory;
+        string outputPath = Path.Combine(exeDir, "scan_result.txt");
+
+        try
+        {
+            int ramMb = GetRamGB_Rounded() * 1024;
+            int cpuThreads = GetCpuThreads();
+            int vramMb = GetVramMB_Rounded();
+            bool isSSD = IsSSD();
+
+            using var w = new StreamWriter(outputPath, false);
+            w.WriteLine($"RAM_MB={ramMb}");
+            w.WriteLine($"CPU_THREADS={cpuThreads}");
+            w.WriteLine($"VRAM_MB={vramMb}");
+            w.WriteLine($"IS_SSD={(isSSD ? 1 : 0)}");
+        }
+        catch { }
+    }
+
+    static int GetRamGB_Rounded()
+    {
+        using var s = new ManagementObjectSearcher(
+            "SELECT TotalPhysicalMemory FROM Win32_ComputerSystem");
+        foreach (ManagementObject o in s.Get())
+        {
+            long b = Convert.ToInt64(o["TotalPhysicalMemory"]);
+            return (int)Math.Ceiling(b / 1024d / 1024d / 1024d);
+        }
+        return 0;
+    }
+
+    static int GetCpuThreads()
+    {
+        int total = 0;
+        using var s = new ManagementObjectSearcher(
+            "SELECT ThreadCount FROM Win32_Processor");
+        foreach (ManagementObject o in s.Get())
+            total += Convert.ToInt32(o["ThreadCount"]);
+        return total > 0 ? total : Environment.ProcessorCount;
+    }
+
+    static int GetVramMB_Rounded()
+    {
+        long best = 0;
+        using var f = new Factory1();
+        foreach (var a in f.Adapters)
+            if (a.Description.DedicatedVideoMemory > best)
+                best = a.Description.DedicatedVideoMemory;
+
+        if (best <= 0) return 2048;
+        return (int)Math.Ceiling(best / 1024d / 1024d / 1024d) * 1024;
+    }
+
+    static bool IsSSD()
+    {
+        using var s = new ManagementObjectSearcher(
+            "SELECT MediaType FROM Win32_DiskDrive");
+        foreach (ManagementObject o in s.Get())
+            if ((o["MediaType"]?.ToString() ?? "").ToUpper().Contains("SSD"))
+                return true;
+        return false;
+    }
+}
+
