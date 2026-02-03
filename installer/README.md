@@ -22,7 +22,7 @@ and do not introduce custom, undocumented, or injected behavior.
 ## Build Information
 
 The installer executable is built using:
-- C# (.NET) for the configuration logic
+- C# (.NET) console application built with Visual Studio (hardware detector)
 - Inno Setup for the installer packaging
 
 The build process does not inject, hook, or modify any game binaries.
