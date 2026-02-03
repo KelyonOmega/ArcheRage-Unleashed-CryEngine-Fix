@@ -44,7 +44,7 @@ jobs:
       # -----------------------------
       - name: Build installer with Inno Setup
         run: |
-          iscc installer\Kelyons Cry Engine Fix Final.iss
+          iscc installer\Kelyons_CryEngineFix_Final.iss
 
       # -----------------------------
       # Upload installer to release
