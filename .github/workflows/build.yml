@@ -17,25 +17,40 @@ jobs:
         with:
           dotnet-version: '6.0.x'
 
+      # -----------------------------
+      # Build detector (C#)
+      # -----------------------------
       - name: Build detector (C#)
         run: |
-          cd detector
+          cd "installer/Visual Studio (detector)"
           dotnet restore
           dotnet build Checking.CPU.RAM.GPU.csproj -c Release
 
+      # -----------------------------
+      # Copy detector exe for Inno Setup
+      # -----------------------------
       - name: Copy detector exe for Inno Setup
         run: |
-          copy detector\bin\Release\**\Checking.CPU.RAM.GPU.exe installer\Inno\Checking.CPU.RAM.GPU.exe
+          copy "installer\Visual Studio (detector)\bin\Release\**\Checking.CPU.RAM.GPU.exe" "installer\Inno Setup Compiler\Checking.CPU.RAM.GPU.exe"
 
+      # -----------------------------
+      # Install Inno Setup
+      # -----------------------------
       - name: Install Inno Setup
         run: |
-          choco install innosetup
-      
+          choco install innosetup -y
+
+      # -----------------------------
+      # Build installer with Inno Setup
+      # -----------------------------
       - name: Build installer with Inno Setup
         run: |
-          iscc installer\Inno\Kelyons Cry Engine Fix Final.iss
+          iscc "installer\Inno Setup Compiler\Kelyons Cry Engine Fix Final.iss"
 
+      # -----------------------------
+      # Upload installer to release
+      # -----------------------------
       - name: Upload installer to release
         uses: softprops/action-gh-release@v2
         with:
-          files: installer/Inno/Output/*.exe
+          files: installer/Inno Setup Compiler/Output/*.exe
